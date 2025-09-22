@@ -1,8 +1,11 @@
 import { Link, Route, Routes } from "react-router-dom";
-import { FaUsers, FaUserSecret } from "react-icons/fa";
-import { FaFileInvoice } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa";
+import { FaFileInvoice } from "react-icons/fa6";
 
 import { FaWarehouse } from "react-icons/fa";
+
+import AdminProductPage from "./admin/product";
+import AddProduct from "./admin/addproduct";
 
 export default function AdminPage(){
     return(
@@ -18,8 +21,9 @@ export default function AdminPage(){
                 <Routes path="/">
               
                  <Route path="/users" element={<h1>Users</h1>}/>
-                <Route path="/product" element={<h1>product</h1>}/>
+                <Route path="/product" element={<AdminProductPage/>}/>
                 <Route path="/orders" element={<h1>orders</h1>}/>
+                <Route path="/addProduct" element={<AddProduct/>}/>
                  </Routes>
 
                
